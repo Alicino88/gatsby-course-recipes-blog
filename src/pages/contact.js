@@ -8,16 +8,50 @@ import styled from "styled-components"
 function Contact() {
   return (
     <Layout>
-      <Wrapper>
-        <h1>contact page</h1>
-      </Wrapper>
+      <main class="page">
+        <section class="contact-page">
+          <article class="contact-info">
+            <h3>Want to get in touch?</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum."
+            </p>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum."
+            </p>
+          </article>
+          <article>
+            <form className="form contact-form">
+              <div className="form-row">
+                <label htmlFor="name">your name</label>
+                <input type="text" name="name" id="name" />
+              </div>
+              <div className="form-row">
+                <label htmlFor="email">your email</label>
+                <input type="text" name="email" id="email" />
+              </div>
+              <div className="form-row">
+                <label htmlFor="message">message</label>
+                <textarea name="message" id="message"></textarea>
+              </div>
+              <button type="submit" className="btn block">
+                submit
+              </button>
+            </form>
+          </article>
+        </section>
+      </main>
     </Layout>
   )
 }
-const Wrapper = styled.section`
-  h2 {
-    color: green;
-  }
-`
 
 export default Contact
