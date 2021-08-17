@@ -1,27 +1,65 @@
-import React from "react"
+import React, { useState } from "react"
+
 import { Link } from "gatsby"
+//icons from https://react-icons.github.io/react-icons/
+import { FiAlignJustify } from "react-icons/fi"
+import logo from "../assets/images/logo.svg"
 
 function Navbar() {
+  //to start with, show is equal to false and the show-links class is not applied
+  const [show, setShow] = useState(false)
   return (
-    <div>
-      <ul>
-        <li>
-          <Link to="/">Homepage</Link>
-        </li>
-        <li>
-          <Link to="/about">about</Link>
-        </li>
-        <li>
-          <Link to="/contact">contact</Link>
-        </li>
-        <li>
-          <Link to="/tags">tags</Link>
-        </li>
-        <li>
-          <Link to="/recipes">recipes</Link>
-        </li>
-      </ul>
-    </div>
+    <nav className="navbar">
+      <div className="nav-center">
+        <div className="nav-header">
+          <Link to="/">
+            <img src={logo} alt="simply recipes" />
+          </Link>
+          <button className="nav-btn" onClick={() => setShow(!show)}>
+            <FiAlignJustify />
+          </button>
+        </div>
+        <div className={show ? "nav-links show-links" : "nav-links"}>
+          <Link
+            to="/"
+            className="nav-link"
+            activeClassName="active-link"
+            onClick={() => setShow(false)}
+          >
+            home
+          </Link>
+          <Link
+            to="/recipes"
+            className="nav-link"
+            activeClassName="active-link"
+            onClick={() => setShow(false)}
+          >
+            recipes
+          </Link>
+          <Link
+            to="/tags"
+            className="nav-link"
+            activeClassName="active-link"
+            onClick={() => setShow(false)}
+          >
+            tags
+          </Link>
+          <Link
+            to="/about"
+            className="nav-link"
+            activeClassName="active-link"
+            onClick={() => setShow(false)}
+          >
+            about
+          </Link>
+          <div className="nav-link contact-link">
+            <Link to="/contact" className="btn" onClick={() => setShow(false)}>
+              contact
+            </Link>
+          </div>
+        </div>
+      </div>
+    </nav>
   )
 }
 
