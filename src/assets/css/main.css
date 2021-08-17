@@ -395,6 +395,7 @@ form > *:last-child {
   padding: 0.15rem 1rem;
 }
 
+/*the menu icon FiAlignJustify is aways displayed below below 992px of width, above the display is none*/
 @media screen and (min-width: 992px) {
   .navbar {
     height: 6rem;
