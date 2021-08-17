@@ -11,8 +11,9 @@ import "../assets/css/main.css"
 function Layout({ children }) {
   return (
     <div>
-      <Navbar></Navbar>
+      <Navbar />
       <div className="content">{children}</div>
+      <Footer />
     </div>
   )
 }
