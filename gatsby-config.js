@@ -23,5 +23,41 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        //name: `pages`,
+        /*"images" is the name for the resources we are providing. You can choose whatever you want for it
+        It doesn't need to match the directory name*/
+        name: `images`,
+        //path: `${__dirname}/src/pages/`,
+        path: `${__dirname}/src/assets/images`,
+      },
+    },
+    /*whenever we need to access a new file/resource we set up a new instance and we add the name we want
+    we then use the name for the query
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `styles`,
+        path: `${__dirname}/src/css`,
+      },
+    },*/
+    /*I can also get all the assets:
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `project`,
+        path: `${__dirname}/src/assets`,
+      },
+    },*/
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `84n65e4pnby0`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: `MXVaZvs7PQNdsHWgVLXZEGZfn7hEMyT6Ro4Ppdw4H20`,
+      },
+    },
   ],
 }
