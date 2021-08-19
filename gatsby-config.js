@@ -4,6 +4,10 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   /* Your site config here */
   /*below metadata to practice GraphQL */
@@ -56,7 +60,7 @@ module.exports = {
       options: {
         spaceId: `84n65e4pnby0`,
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: `MXVaZvs7PQNdsHWgVLXZEGZfn7hEMyT6Ro4Ppdw4H20`,
+        accessToken: process.env.CONTENTFUL_API_KEY,
       },
     },
   ],
