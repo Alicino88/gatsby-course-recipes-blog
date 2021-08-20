@@ -12,7 +12,8 @@ to the Layout component*/
 import React from "react"
 import Layout from "../components/Layout.js"
 import { StaticImage } from "gatsby-plugin-image"
-import FetchData from "../examples/fetchData.js"
+
+import AllRecipes from "../components/AllRecipes.js"
 
 export default function Home() {
   return (
@@ -33,7 +34,8 @@ export default function Home() {
             </div>
           </div>
         </header>
-        <FetchData></FetchData>
+
+        <AllRecipes />
       </main>
     </Layout>
   )
