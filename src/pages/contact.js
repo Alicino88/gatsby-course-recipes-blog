@@ -4,8 +4,11 @@ import Layout from "../components/Layout.js"
 //also add the plugin in the gatsby-config.js file
 //"styled is a convention name"
 import styled from "styled-components"
+import { Link, graphql } from "gatsby"
+import RecipesList from "../components/RecipesList"
 
-function Contact() {
+function Contact({ data }) {
+  const recipes = data.allContentfulRecipe.nodes
   return (
     <Layout>
       <main class="page">
@@ -49,9 +52,31 @@ function Contact() {
             </form>
           </article>
         </section>
+        <section className="featured-recipes">
+          <h5>Look at this awesome recipes!</h5>
+          <RecipesList recipes={recipes} />
+        </section>
       </main>
     </Layout>
   )
 }
-
+export const query = graphql`
+  {
+    allContentfulRecipe(
+      sort: { fields: title, order: ASC }
+      filter: { featured: { eq: true } }
+    ) {
+      nodes {
+        id
+        title
+        cookTime
+        prepTime
+        image {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+        }
+      }
+      totalCount
+    }
+  }
+`
 export default Contact
