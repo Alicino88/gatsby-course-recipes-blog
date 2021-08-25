@@ -27,15 +27,15 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic
+    //For SEO:
     `gatsby-plugin-react-helmet`,
+    //To access files:
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        //name: `pages`,
-        /*"images" is the name for the resources we are providing. You can choose whatever you want for it
-        It doesn't need to match the directory name*/
+        /*"images" is the name for the resources we are providing. Whatever name can be chosen,
+        it doesn't need to match the directory name*/
         name: `images`,
-        //path: `${__dirname}/src/pages/`,
         path: `${__dirname}/src/assets/images`,
       },
     },
@@ -64,6 +64,7 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_API_KEY,
       },
     },
+    //to make sure fonts are loaded immadiately:
     {
       resolve: `gatsby-plugin-webfonts`,
       options: {

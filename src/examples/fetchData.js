@@ -1,4 +1,3 @@
-//this is the code copied from the code exporter of the GraphiQL IDE
 //example of query using StaticQuery hook
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
@@ -27,7 +26,7 @@ const ComponentName = () => {
   `)
   //the original code createsa json string from a  javascript object by using the stringify method
   //return <pre>{JSON.stringify(data, null, 4)}</pre>
-  //below code modified to access only certain data and rener them with the HTML elements I want
+  //below code modified to access only certain data and render them with the HTML elements I want
   return (
     <div>
       <h2>{data.site.siteMetadata.person.name}</h2>

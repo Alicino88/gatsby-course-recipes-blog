@@ -1,8 +1,9 @@
 //Index is the hp
-/*the hp, index.js, like the other pages, are wrapped around the Layout component
-The Layout component contains the elements that are always visible, such as the navbar, and the actual
-content of the page (in this case the h1Content of the homepageH1) that is passed using children prop
-to the Layout component*/
+/*All pages are wrapped around the Layout component:
+The Layout component contains the elements that are always visible, such as the navbar and footer, 
+and the actual content of the page (in this case the h1 and h4) that is passed using "children" prop
+inside the Layout component*/
+
 /*example of inline styling:
  <Layout>
         {style: the first bracket is to access javascript and the second to access the object }

@@ -34,7 +34,6 @@ const testPageQuery = (props) => {
   )
 }*/
 
-//this is the same as above using prop
 //we can destructure the prop and access the data:
 const testPageQuery = ({ data }) => {
   console.log(data)

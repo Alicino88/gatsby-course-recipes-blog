@@ -4,9 +4,10 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { BsClockHistory, BsClock, BsPeople } from "react-icons/bs"
 import Layout from "../components/Layout.js"
 import SEO from "../components/SEO.js"
-/*when I click on the recipe on the RecipesList.js component the title of the recipe is "slugified"
-the dynamic page that opens up {ContentfulRecipe.title}.js uses the query variable $title to get
-the data from the specific recipe. Gatsby automatically creates a page for each recipe when we create the file
+/*when I click on the recipe on the RecipesList.js component the title of the recipe is "slugified".
+The dynamic page that opens up {ContentfulRecipe.title}.js uses the query variable $title to get
+the data from the specific recipe. 
+Gatsby automatically creates a page for each recipe when we create the file
 {ContentfulRecipe.title}.js inside the pages folder.
 */
 const RecipeTemplate = ({ data }) => {

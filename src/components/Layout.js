@@ -1,4 +1,4 @@
-/*Layout component is the one that wraps all the others*/
+/*Layout component is the one that wraps all the pages*/
 /*children props represents the actual content of the page*/
 import React from "react"
 import Navbar from "./Navbar.js"
