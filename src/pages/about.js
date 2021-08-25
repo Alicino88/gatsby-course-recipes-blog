@@ -3,12 +3,14 @@ import Layout from "../components/Layout.js"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link, graphql } from "gatsby"
 import RecipesList from "../components/RecipesList"
+import SEO from "../components/SEO.js"
 //the data come from the Page query below
 function About({ data }) {
   console.log(data)
   const recipes = data.allContentfulRecipe.nodes
   return (
     <Layout>
+      <SEO title="About" />
       <main className="page">
         <section className="about-page">
           <article>

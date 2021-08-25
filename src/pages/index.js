@@ -12,12 +12,13 @@ to the Layout component*/
 import React from "react"
 import Layout from "../components/Layout.js"
 import { StaticImage } from "gatsby-plugin-image"
-
+import SEO from "../components/SEO.js"
 import AllRecipes from "../components/AllRecipes.js"
 
 export default function Home() {
   return (
     <Layout>
+      <SEO title="Home" />
       <main className="page">
         <header className="hero">
           <StaticImage

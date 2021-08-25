@@ -4,13 +4,15 @@ import Layout from "../components/Layout.js"
 //also add the plugin in the gatsby-config.js file
 //"styled is a convention name"
 import styled from "styled-components"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import RecipesList from "../components/RecipesList"
+import SEO from "../components/SEO.js"
 
 function Contact({ data }) {
   const recipes = data.allContentfulRecipe.nodes
   return (
     <Layout>
+      <SEO title="Contact" />
       <main class="page">
         <section class="contact-page">
           <article class="contact-info">
@@ -33,7 +35,11 @@ function Contact({ data }) {
             </p>
           </article>
           <article>
-            <form className="form contact-form">
+            <form
+              action="https://formspree.io/f/mjvjpzda"
+              method="POST"
+              className="form contact-form"
+            >
               <div className="form-row">
                 <label htmlFor="name">your name</label>
                 <input type="text" name="name" id="name" />
