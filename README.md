@@ -7,3 +7,4 @@ Topics handled inside the code are:
 - Gatsby plugin react helmet for SEO
 - Gatsby plugin styled components
 - Gatsby plugin webfonts
+- Contentful as a headless CMS
